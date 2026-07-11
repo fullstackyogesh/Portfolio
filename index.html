@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogesh | Full Stack Web Developer</title>
+    <meta name="description"
+        content="Portfolio of Yogesh, a full stack web developer with expertise in Python, Django, JavaScript, and AWS.">
+    <meta name="keywords"
+        content="Yogesh, Full Stack Developer, Django Developer, Portfolio, Web Developer, Yogesh Fullstack">
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="milestone.css">
+
+    <style>
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-badge {
+            padding: 5px 15px;
+            border-radius: 50px;
+            background: rgba(37, 45, 68, .9);
+            backdrop-filter: blur(15px);
+            color: #8EE7DA;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .2px;
+            border: 1px solid rgba(255, 255, 255, .06);
+            transition: .35s;
+            user-select: none;
+        }
+
+        .tech-badge:hover {
+            color: #fff;
+            background: linear-gradient(135deg,
+                    #2F7D1F,
+                    #4CAF50);
+            transform: translateY(-5px);
+            box-shadow:
+                0 15px 35px rgba(76, 175, 80, .25);
+        }
+
+
+        .tf__single_skill_2 {
+            transition: .35s;
+            position: relative;
+            overflow: hidden;
+            transition: all .4s ease;
+        }
+
+        .tf__single_skill_2::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg,
+                    rgba(0, 53, 18, 0.12),
+                    rgba(61, 255, 126, 0));
+            opacity: 0;
+            transition: .4s;
+        }
+
+        .tf__single_skill_2:hover {
+            transform: translateY(-12px);
+            border-color: #32d74b38;
+            box-shadow: inset 0px 0px 20px rgba(50, 215, 75, 0.26)
+        }
+
+        .tf__single_skill_2:hover::before {
+            opacity: 1;
+        }
+
+        .tf__single_skill_2 h3 {
+            transition: .35s;
+        }
+
+        .tf__single_skill_2:hover h3 {
+            color: #32d74b;
+        }
+
+        .tf__single_skill_2::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background: #32d74b;
+            transition: .4s;
+        }
+
+        .tf__single_skill_2:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--=======================================================================
+        ///////////////////////////// PRELOADER START /////////////////////////////
+        ========================================================================-->
+    <div class="preloader">
+        <!-- Pixel grid elements -->
+        <div class="pixel-grid">
+            <div class="pixel-row" id="top-row"></div>
+            <div class="pixel-row" id="bottom-row"></div>
+            <div class="pixel-column" id="left-column"></div>
+            <div class="pixel-column" id="right-column"></div>
+        </div>
+
+        <!-- Massive counter -->
+        <div class="counter-wrapper">
+            <div class="counter" id="counter">0</div>
+            <div class="counter-outline" aria-hidden="true"></div>
+        </div>
+
+        <!-- Status text -->
+        <div class="text-container">
+            <div class="loading-text">LOADING SYSTEM</div>
+            <div class="system-messages">
+                <div class="message">INITIALIZING</div>
+                <div class="message">DATA_TRANSFER</div>
+                <div class="message">COMPILING</div>
+                <div class="message">FINALIZING</div>
+                <div class="message">COMPLETE</div>
+            </div>
+        </div>
+
+        <!-- Progress markers -->
+        <div class="loading-bar-container">
+            <div class="loading-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="loading-bar-markers">
+                <div class="marker" data-position="0">00</div>
+                <div class="marker" data-position="25">25</div>
+                <div class="marker" data-position="50">50</div>
+                <div class="marker" data-position="75">75</div>
+                <div class="marker" data-position="100">100</div>
+            </div>
+            <!-- Progressive line fills -->
+            <div class="connector-lines">
+                <div class="connector-line" id="line-0-25"></div>
+                <div class="connector-line" id="line-25-50"></div>
+                <div class="connector-line" id="line-50-75"></div>
+                <div class="connector-line" id="line-75-100"></div>
+            </div>
+        </div>
+
+        <!-- Block elements that progressively fill -->
+        <div class="block-container">
+            <div class="block" id="block-1"></div>
+            <div class="block" id="block-2"></div>
+            <div class="block" id="block-3"></div>
+            <div class="block" id="block-4"></div>
+        </div>
+    </div>
+    <!--=======================================================================
+        ////////////////////////////// PRELOADER END //////////////////////////////
+        ========================================================================-->
+
+
+    <div class="main_body">
+        <!--=======================================================================
+            ////////////////////////////// HEADER START ///////////////////////////////
+            ========================================================================-->
+        <nav id="menu-bar" class="main_menu">
+            <span id="menu_icon" class="menu_icon">
+                <i id="menu_btn" class="fa-solid fa-bars open_icon"></i>
+            </span>
+            <a class="logo" href="/">
+                <img src="img/logo.png" alt="DDD" class="img-fluid w-100" />
+            </a>
+            <ul id="menu-menu" class="navbar-nav m-auto">
+                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-328"
+                    class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-328 nav-item">
+                    <a title="Home" href="#banner" class="nav-link text_hover_animaiton active">
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" id="null" class="img-fluid w-100 svg replaced-svg">
+                                <path
+                                    d="M9.02 2.84004L3.63 7.04004C2.73 7.74004 2 9.23004 2 10.36V17.77C2 20.09 3.89 21.99 6.21 21.99H17.79C20.11 21.99 22 20.09 22 17.78V10.5C22 9.29004 21.19 7.74004 20.2 7.05004L14.02 2.72004C12.62 1.74004 10.37 1.79004 9.02 2.84004Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M12 17.99V14.99" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        Home
+                    </a>
+                </li>
+                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-329"
+                    class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-329 nav-item">
+                    <a title="About" href="#about" class="nav-link text_hover_animaiton">
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" id="null" class="img-fluid w-100 svg replaced-svg">
+                                <path
+                                    d="M18.63 7.1499C18.67 7.7599 18.62 8.4499 18.5 9.2199L17.77 13.9099C17.15 17.8199 15.34 19.1399 11.43 18.5299L6.73999 17.7899C5.38999 17.5799 4.34999 17.2199 3.58999 16.6799C2.13999 15.6699 1.71999 14.0099 2.11999 11.4499L2.85999 6.7599C3.47999 2.8499 5.28999 1.5299 9.19999 2.1399L13.89 2.8799C17.03 3.3699 18.5 4.6499 18.63 7.1499Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M20.5 13.4699L19 17.9799C17.75 21.7399 15.75 22.7399 11.99 21.4899L7.48003 19.9899C5.21003 19.2399 3.95003 18.1999 3.59003 16.6799C4.35003 17.2199 5.39003 17.5799 6.74003 17.7899L11.43 18.5299C15.34 19.1399 17.15 17.8199 17.77 13.9099L18.5 9.2199C18.62 8.4499 18.67 7.7599 18.63 7.1499C21.02 8.4199 21.54 10.3399 20.5 13.4699Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M8.24 8.98C9.20098 8.98 9.98 8.20098 9.98 7.24C9.98 6.27902 9.20098 5.5 8.24 5.5C7.27902 5.5 6.5 6.27902 6.5 7.24C6.5 8.20098 7.27902 8.98 8.24 8.98Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </span>
+                        About
+                    </a>
+                </li>
+                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-330"
+                    class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-330 nav-item">
+                    <a title="Services" href="#service" class="nav-link text_hover_animaiton">
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" id="null" class="img-fluid w-100 svg replaced-svg">
+                                <path
+                                    d="M7.99995 22H15.9999C20.0199 22 20.7399 20.39 20.9499 18.43L21.6999 10.43C21.9699 7.99 21.2699 6 16.9999 6H6.99995C2.72995 6 2.02995 7.99 2.29995 10.43L3.04995 18.43C3.25995 20.39 3.97995 22 7.99995 22Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M8 6V5.2C8 3.43 8 2 11.2 2H12.8C16 2 16 3.43 16 5.2V6" stroke="#000000"
+                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M14 13V14C14 14.01 14 14.01 14 14.02C14 15.11 13.99 16 12 16C10.02 16 10 15.12 10 14.03V13C10 12 10 12 11 12H13C14 12 14 12 14 13Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M21.65 11C19.34 12.68 16.7 13.68 14 14.02" stroke="#000000" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2.62 11.27C4.87 12.81 7.41 13.74 10 14.03" stroke="#000000" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        Services
+                    </a>
+                </li>
+                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-331"
+                    class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-331 nav-item">
+                    <a title="Skills" href="#skills" class="nav-link text_hover_animaiton">
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" id="null" class="img-fluid w-100 svg replaced-svg">
+                                <path
+                                    d="M19.79 7.27009L16.76 4.24009C15.61 3.09009 14.04 3.15009 13.27 4.38009L11.58 7.05009L16.98 12.4501L19.65 10.7601C20.8 10.0301 20.87 8.35009 19.79 7.27009Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M11.58 7.04996L7.65 6.80996C5.46 6.67996 4.69 7.34996 4.45 9.43996L3.47 17.76C3.26 19.51 4.53 20.77 6.27 20.56L14.59 19.58C16.68 19.33 17.44 18.57 17.22 16.38L16.99 12.45"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M4.61 19.4199L7.64 16.3799" stroke="#000000" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        Skills
+                    </a>
+                </li>
+                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-331"
+                    class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-331 nav-item">
+                    <a title="award" href="#award" class="nav-link text_hover_animaiton">
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 269.246 269.246" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                id="null" class="img-fluid w-100 svg replaced-svg">
+                                <path d="M186.123,186.246h-36.5v-31.765l41.646,19.855-8.182-62.219
+                                        43.19-45.526-61.702-11.445-29.952-55.146-29.952,55.146-61.702,11.445
+                                        43.19,45.526-8.182,62.219 41.646-19.855v31.765h-36.5v53h-17.5v30h17.5
+                                        103 17.5v-30h-17.5v-53zm-83.375-100.231l21.458-3.98
+                                        10.417-19.179 10.417,19.179 21.458,3.98-15.021,15.833
+                                        2.846,21.639-19.7-9.394-19.7,9.394
+                                        2.846-21.639-15.021-15.833zm10.375,153.231v-23h43v23h-43z" class="mt-a" fill="currentColor" />
+                            </svg>
+                        </span>
+                        Award
+                    </a>
+                </li>
+                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-332"
+                    class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-332 nav-item">
+                    <a title="Portfolio" href="#portfolio" class="nav-link text_hover_animaiton">
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" id="null" class="img-fluid w-100 svg replaced-svg">
+                                <path
+                                    d="M17.98 10.79V14.79C17.98 15.05 17.97 15.3 17.94 15.54C17.71 18.24 16.12 19.58 13.19 19.58H12.79C12.54 19.58 12.3 19.7 12.15 19.9L10.95 21.5C10.42 22.21 9.56 22.21 9.03 21.5L7.82999 19.9C7.69999 19.73 7.41 19.58 7.19 19.58H6.79001C3.60001 19.58 2 18.79 2 14.79V10.79C2 7.86001 3.35001 6.27001 6.04001 6.04001C6.28001 6.01001 6.53001 6 6.79001 6H13.19C16.38 6 17.98 7.60001 17.98 10.79Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M21.98 6.79001V10.79C21.98 13.73 20.63 15.31 17.94 15.54C17.97 15.3 17.98 15.05 17.98 14.79V10.79C17.98 7.60001 16.38 6 13.19 6H6.79004C6.53004 6 6.28004 6.01001 6.04004 6.04001C6.27004 3.35001 7.86004 2 10.79 2H17.19C20.38 2 21.98 3.60001 21.98 6.79001Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M13.4955 13.25H13.5045" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M9.9955 13.25H10.0045" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M6.4955 13.25H6.5045" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        Portfolio
+                    </a>
+                </li>
+                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-334"
+                    class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-334 nav-item">
+                    <a title="Contact" href="#contact" class="nav-link text_hover_animaiton">
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" id="null" class="img-fluid w-100 svg replaced-svg">
+                                <path
+                                    d="M18.14 21.62C17.26 21.88 16.22 22 15 22H8.99998C7.77998 22 6.73999 21.88 5.85999 21.62C6.07999 19.02 8.74998 16.97 12 16.97C15.25 16.97 17.92 19.02 18.14 21.62Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M15 2H9C4 2 2 4 2 9V15C2 18.78 3.14 20.85 5.86 21.62C6.08 19.02 8.75 16.97 12 16.97C15.25 16.97 17.92 19.02 18.14 21.62C20.86 20.85 22 18.78 22 15V9C22 4 20 2 15 2ZM12 14.17C10.02 14.17 8.42 12.56 8.42 10.58C8.42 8.60002 10.02 7 12 7C13.98 7 15.58 8.60002 15.58 10.58C15.58 12.56 13.98 14.17 12 14.17Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M15.58 10.58C15.58 12.56 13.98 14.17 12 14.17C10.02 14.17 8.42004 12.56 8.42004 10.58C8.42004 8.60002 10.02 7 12 7C13.98 7 15.58 8.60002 15.58 10.58Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </span>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--=======================================================================
+            /////////////////////////////// HEADER END ////////////////////////////////
+            ========================================================================-->
+
+
+        <div class="main">
+            <!--=======================================================================
+                ////////////////////////////// BANNER START ///////////////////////////////
+                ========================================================================-->
+            <section id="banner" style="background: url(img/banner.png);">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xxl-6 col-md-9 col-lg-7">
+                            <div class="tf_banner_text">
+                                <h1>
+                                    <!-- HI, I'M ZYAN! Creative -->
+                                    HI, I'M Yogesh! Creative
+                                    <span class="cd-headline rotate-1">
+                                        <span class="cd-words-wrapper" style="width: 250.156px;">
+                                            <b class="is-hidden">Developer</b>
+                                            <b class="is-visible">Coder</b>
+                                            <b class="is-hidden">Designer</b>
+                                        </span>
+                                    </span>
+                                </h1>
+                                <p>
+                                    My professional journey began in 2022, evolving from a Web Developer Intern to a
+                                    Senior Web Developer through consistent performance and successful project delivery.
+                                    I specialize in designing, developing, and deploying scalable full-stack web
+                                    applications using Python, Django, JavaScript, PostgreSQL, and AWS. Passionate about
+                                    solving real-world business challenges, I build secure, high-performance digital
+                                    solutions with a strong focus on clean architecture, user experience, and continuous
+                                    innovation.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <a href="Yogesh-Kumar-Full-stack-web-developer.pdf" target="_blank"
+                                            class="common_btn" href="#">
+                                            Download CV <i aria-hidden="true"
+                                                class="fa-solid fa-arrow-down-to-line"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="banner_video_btn play_btn" href="https://wa.me/919671491680"
+                                            target="_blank">
+                                            <i aria-hidden="true" class="fab fa-whatsapp"></i>
+                                            Get in Touch
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--=======================================================================
+                /////////////////////////////// BANNER END ////////////////////////////////
+                ========================================================================-->
+
+
+            <!--=======================================================================
+                /////////////////////////////// ABOUT START ///////////////////////////////
+                ========================================================================-->
+            <section id="about" class="tf_about pt_130 xs_pt_80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="tf_section_heading">
+                                <h5 class="has-animation rise-up" style>ABOUT ME</h5>
+                                <h2 class="has-animation letter-animate" style>Building Ideas Into Impactful Web
+                                    Experiences</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="tf_about_text">
+                                <ul class="about-animation">
+                                    <li class="about-animation-box" style="margin-bottom: 90px;">
+                                        <div class="top fade_bottom" data-trigerid="about"
+                                            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                            <div>
+                                                <h3 class="my-ambition">My Ambition</h3>
+                                                <p>
+                                                    To become a world-class Software Architect and Technical Leader by
+                                                    building scalable, secure, and high-performance digital solutions
+                                                    that create real business impact. I strive to continuously expand my
+                                                    expertise in cloud technologies, system design, and modern software
+                                                    engineering while delivering innovative products that solve complex
+                                                    real-world challenges.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <div class="timeline-line">
+                                        <span class="timeline-dot"></span>
+                                    </div>
+                                    <li class="about-animation-box">
+                                        <div class="top fade_bottom" data-trigerid="about"
+                                            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                            <div>
+                                                <h3 class="my-purpose">My Purpose</h3>
+                                                <p>
+                                                    To create innovative digital solutions that solve real-world
+                                                    problems through scalable architecture, clean code, and user-focused
+                                                    design. My goal is to build reliable software that empowers
+                                                    businesses, enhances user experiences, and delivers meaningful
+                                                    impact with every project.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="tf_about_img tf_about_img_bg_element">
+                                <img decoding="async" src="img/about_img_2.png" class="about-img img-fluid w-100" alt>
+                                <div class="tf_about_img_text">
+                                    <i aria-hidden="true" class="fas fa-award"></i>
+                                    <h4>
+                                        4+
+                                        <span>Years Of Experience</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--=======================================================================
+                //////////////////////////////// ABOUT END ////////////////////////////////
+                ========================================================================-->
+
+
+            <!--=======================================================================
+                ////////////////////////////// SERVICE START //////////////////////////////
+                ========================================================================-->
+            <section id="service" class="tf_service pt_130 xs_pt_80 animation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-9 m-auto">
+                            <div class="tf_section_heading mb_40">
+                                <h5 class="has-animation rise-up" style>What I Specialize In</h5>
+                                <h2 class="has-animation letter-animate" style>Building Scalable Web Solutions That
+                                    Drive Business Growth</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row service-animation">
+                        <div class="col-xl-4 col-md-6 col-lg-4 service-animation-box">
+                            <div class="tf_single_service fade_left" data-trigerid="service"
+                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                <div class="text">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" id="null"
+                                            class="img-fluid w-100 svg replaced-svg">
+                                            <path
+                                                d="M10.75 22.5001H13.27C14.23 22.5001 14.85 21.8201 14.67 20.9901L14.26 19.1802H9.75999L9.35 20.9901C9.17 21.7701 9.85 22.5001 10.75 22.5001Z"
+                                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path
+                                                d="M14.26 19.1702L15.99 17.6301C16.96 16.7701 17 16.1701 16.23 15.2001L13.18 11.3302C12.54 10.5202 11.49 10.5202 10.85 11.3302L7.8 15.2001C7.03 16.1701 7.02999 16.8001 8.03999 17.6301L9.77 19.1702"
+                                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M12.01 11.1201V13.6501" stroke="#000000" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M12.52 5H11.52C10.97 5 10.52 4.55 10.52 4V3C10.52 2.45 10.97 2 11.52 2H12.52C13.07 2 13.52 2.45 13.52 3V4C13.52 4.55 13.07 5 12.52 5Z"
+                                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path
+                                                d="M3.27 14.17H4.27C4.82 14.17 5.27 13.72 5.27 13.17V12.17C5.27 11.62 4.82 11.1699 4.27 11.1699H3.27C2.72 11.1699 2.27 11.62 2.27 12.17V13.17C2.27 13.72 2.72 14.17 3.27 14.17Z"
+                                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path
+                                                d="M20.73 14.17H19.73C19.18 14.17 18.73 13.72 18.73 13.17V12.17C18.73 11.62 19.18 11.1699 19.73 11.1699H20.73C21.28 11.1699 21.73 11.62 21.73 12.17V13.17C21.73 13.72 21.28 14.17 20.73 14.17Z"
+                                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M10.52 3.56006C6.71 4.01006 3.75 7.24004 3.75 11.17"
+                                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M20.25 11.17C20.25 7.25004 17.31 4.03006 13.52 3.56006"
+                                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <h3>Full Stack Web Development</h3>
+                                    <p>
+                                        Build secure, scalable, and high-performance web applications using Python,
+                                        Django, JavaScript, PostgreSQL, and modern web technologies.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-lg-4 service-animation-box">
+                            <div class="tf_single_service fade_left active" data-trigerid="service"
+                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                <div class="text">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" id="null"
+                                            class="img-fluid w-100 svg replaced-svg">
+                                            <path
+                                                d="M8.92993 2L8.95993 3.53003C8.97993 4.34003 9.64993 5 10.4599 5H13.4799C14.3099 5 14.9799 4.32 14.9799 3.5V2"
+                                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M17 17L15 19L17 21" stroke="#000000" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                            <path d="M20 17L22 19L20 21" stroke="#000000" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                            <path d="M13 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7V14"
+                                                stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <i class="icon-app-development"></i>
+                                    </span>
+                                    <h3>API Development & Integrations</h3>
+                                    <p>
+                                        Design secure REST APIs and integrate third-party services including payment
+                                        gateways, shipping providers, authentication, and cloud platforms.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-lg-4 service-animation-box">
+                            <div class="tf_single_service fade_left" data-trigerid="service"
+                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                <div class="text">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 32 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" id="null"
+                                            class="img-fluid w-100 svg replaced-svg">
+
+                                            <path
+                                                d="M3,6v15c0,1.1,0.9,2,2,2h22c1.1,0,2-0.9,2-2V6c0-1.1-0.9-2-2-2H5C3.9,4,3,4.9,3,6z"
+                                                stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" fill="none" />
+
+                                            <line x1="3" y1="19" x2="29" y2="19" stroke="#000000" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+                                            <line x1="9" y1="29" x2="23" y2="29" stroke="#000000" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+                                            <path d="M13,23c0,2.1-0.7,4.6-1.8,6" stroke="#000000" stroke-width="2"
+                                                stroke-linecap="round" fill="none" />
+
+                                            <path d="M20.8,29c-1.1-1.4-1.8-3.9-1.8-6" stroke="#000000" stroke-width="2"
+                                                stroke-linecap="round" fill="none" />
+
+                                            <path
+                                                d="M18.8,16c0.1-0.3,0.2-0.6,0.2-1c0-1.7-1.3-3-3-3s-3,1.3-3,3c0,0.4,0.1,0.7,0.2,1"
+                                                stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" fill="none" />
+
+                                            <path d="M24.3,16c0-0.3,0.1-0.7,0.1-1c0-0.7-0.1-1.3-0.2-1.9c-1,0.1-2-0.3-2.5-1.3
+                                                    c-0.5-0.9-0.4-2,0.2-2.8c-0.9-0.9-2.1-1.6-3.4-2C18,7.9,17.1,8.6,16,8.6S14,7.9,13.6,7
+                                                    c-1.3,0.4-2.4,1.1-3.4,2c0.6,0.8,0.7,1.9,0.2,2.8c-0.5,0.9-1.6,1.4-2.5,1.3
+                                                    c-0.1,0.6-0.2,1.3-0.2,1.9c0,0.3,0,0.7,0.1,1" stroke="#000000"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                fill="none" />
+                                        </svg>
+                                    </span>
+                                    <h3>Cloud Deployment & Optimization</h3>
+                                    <p>
+                                        Deploy production-ready applications on AWS with performance optimization,
+                                        monitoring, security, and continuous maintenance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--=======================================================================
+                /////////////////////////////// SERVICE END ///////////////////////////////
+                ========================================================================-->
+
+
+            <!--=======================================================================
+                /////////////////////////////// SKILLS START //////////////////////////////
+                ========================================================================-->
+            <section id="skills" class="tf__skills_2 pt_115 xs_pt_75 pb_120 xs_pb_80 mt_165 xs_mt_80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-9 m-auto">
+                            <div class="tf_section_heading mb_30">
+                                <h5 class="has-animation rise-up">MY SKILLS</h5>
+                                <h2 class="has-animation letter-animate">Building Digital Experiences with Skill and
+                                    Precision</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xxl-8 col-xl-10 m-auto">
+                            <ul class="nav nav-pills mb_30" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a href="Yogesh-Kumar-Full-stack-web-developer.pdf" target="_blank">
+                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true">
+                                            Download Cv <i class="fa-solid fa-arrow-down-to-line"></i>
+                                        </button>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-disabled" type="button" role="tab"
+                                        aria-controls="pills-disabled" aria-selected="false" tabindex="-1">
+                                        Experience
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-profile" type="button" role="tab"
+                                        aria-controls="pills-profile" aria-selected="false" tabindex="-1">
+                                        Education
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                    aria-labelledby="pills-home-tab" tabindex="0">
+                                    <div class="row skills-animation">
+                                        <div class="col-xl-6 col-lg-6 skills-animation-box">
+                                            <div class="tf__single_skill_2 fade_bottom" data-trigerid="skills"
+                                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                                <h3>Johnnette Technologies Pvt. Ltd.</h3>
+                                                <h2>Senior Web Developer</h2>
+                                                <h4>Jan 2025 - Present</h4>
+                                                <p>
+                                                    Leading the end-to-end delivery of enterprise web applications using
+                                                    Python, Django, PostgreSQL, JavaScript, and AWS, with responsibility
+                                                    for solution architecture, technical leadership, cloud
+                                                    infrastructure, and production deployments. Driving performance
+                                                    optimization, mentoring 10+ developers, collaborating with
+                                                    stakeholders, and delivering scalable business solutions while being
+                                                    recognized with the "Best Innovative Web Developer Award" for
+                                                    innovation and technical excellence.
+                                                </p>
+                                                <div class="tech-stack">
+                                                    <span class="tech-badge">Python</span>
+                                                    <span class="tech-badge">Django</span>
+                                                    <span class="tech-badge">Django REST framework</span>
+                                                    <span class="tech-badge">TypeScript</span>
+                                                    <span class="tech-badge">HTML &amp; CSS</span>
+                                                    <span class="tech-badge">SQLite</span>
+                                                    <span class="tech-badge">MySQL</span>
+                                                    <span class="tech-badge">PostgreSQL</span>
+                                                    <span class="tech-badge">jQuery</span>
+                                                    <span class="tech-badge">AWS</span>
+                                                    <span class="tech-badge">Bootstrap</span>
+                                                    <span class="tech-badge">REST APIs</span>
+                                                </div>
+                                                <br>
+                                                <p style="margin-top: -15px;"></p>
+                                                <div class="tf__team_skills_bar_single">
+                                                    <p>Performence</p>
+                                                    <div id="bar1" class="barfiller">
+                                                        <div class="tipWrap">
+                                                            <span class="tip"></span>
+                                                        </div>
+                                                        <span class="fill" data-percentage="90"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 skills-animation-box">
+                                            <div class="tf__single_skill_2 fade_bottom" data-trigerid="skills"
+                                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                                <h3>Johnnette Technologies Pvt. Ltd.</h3>
+                                                <h2>Full-Stack Web Developer</h2>
+                                                <h4>Jan 2023 - Dec 2024</h4>
+                                                <p>
+                                                    Independently designed, developed, and delivered multiple
+                                                    production-grade web applications using Python, Django, PostgreSQL,
+                                                    JavaScript, Bootstrap, and AWS across e-commerce, publishing,
+                                                    education, and enterprise domains. Took complete ownership of the
+                                                    software development lifecycle, including requirement analysis,
+                                                    solution architecture, REST API development, cloud deployment,
+                                                    third-party integrations, performance optimization, and client
+                                                    collaboration, successfully delivering scalable business solutions
+                                                    that led to promotion as Senior Web Developer.
+                                                </p>
+                                                <div class="tech-stack">
+                                                    <span class="tech-badge">Python</span>
+                                                    <span class="tech-badge">Django</span>
+                                                    <span class="tech-badge">TypeScript</span>
+                                                    <span class="tech-badge">HTML &amp; CSS</span>
+                                                    <span class="tech-badge">SQLite</span>
+                                                    <span class="tech-badge">PostgreSQL</span>
+                                                    <span class="tech-badge">jQuery</span>
+                                                    <span class="tech-badge">AWS</span>
+                                                    <span class="tech-badge">Bootstrap</span>
+                                                    <span class="tech-badge">REST APIs</span>
+                                                </div>
+                                                <br>
+                                                <div class="tf__team_skills_bar_single">
+                                                    <p>Performence</p>
+                                                    <div id="bar2" class="barfiller">
+                                                        <div class="tipWrap">
+                                                            <span class="tip"></span>
+                                                        </div>
+                                                        <span class="fill" data-percentage="90"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 skills-animation-box">
+                                            <div class="tf__single_skill_2 fade_bottom" data-trigerid="skills"
+                                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                                <h3>Johnnette Technologies Pvt. Ltd.</h3>
+                                                <h2>Associate Web Developer</h2>
+                                                <h4>Apr 2022 - Dec 2022</h4>
+                                                <p>
+                                                    Led the end-to-end development and deployment of the company's
+                                                    official website using HTML, CSS, JavaScript, jQuery, Bootstrap,
+                                                    PWA, and AWS. Delivered a responsive, SEO-optimized Progressive Web
+                                                    Application that attracted 2,000+ daily visitors, increased customer
+                                                    engagement by 70%, enhanced brand visibility, and provided a
+                                                    scalable digital platform for marketing, lead generation, and
+                                                    business growth through continuous optimization and cloud
+                                                    infrastructure management.
+                                                </p>
+                                                <div class="tech-stack">
+                                                    <span class="tech-badge">Python</span>
+                                                    <span class="tech-badge">Django</span>
+                                                    <span class="tech-badge">TypeScript</span>
+                                                    <span class="tech-badge">HTML &amp; CSS</span>
+                                                    <span class="tech-badge">SQLite</span>
+                                                    <span class="tech-badge">MySQL</span>
+                                                    <span class="tech-badge">jQuery</span>
+                                                    <span class="tech-badge">AWS</span>
+                                                    <span class="tech-badge">Bootstrap</span>
+                                                    <span class="tech-badge">REST APIs</span>
+                                                </div>
+                                                <br>
+                                                <div class="tf__team_skills_bar_single">
+                                                    <p>Performence</p>
+                                                    <div id="bar3" class="barfiller">
+                                                        <div class="tipWrap">
+                                                            <span class="tip"></span>
+                                                        </div>
+                                                        <span class="fill" data-percentage="75"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 skills-animation-box">
+                                            <div class="tf__single_skill_2 fade_bottom" data-trigerid="skills"
+                                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                                <h3>Johnnette Technologies Pvt. Ltd.</h3>
+                                                <h2>Web Development Intern</h2>
+                                                <h4>Jan 2022 - Mar 2022</h4>
+                                                <p>
+                                                    Contributed to the development of a DGCA-approved drone training
+                                                    management platform using Python, Django, MySQL, JavaScript, jQuery,
+                                                    and AWS. Assisted in building backend modules, automating training
+                                                    workflows, optimizing application performance, and supporting a
+                                                    scalable system that streamlined operations and enabled the
+                                                    certification of over 3,500+ drone pilots now employed across India,
+                                                    while ensuring reliable, secure, and efficient training management.
+                                                </p>
+                                                <div class="tech-stack">
+                                                    <span class="tech-badge">Python</span>
+                                                    <span class="tech-badge">Django</span>
+                                                    <span class="tech-badge">TypeScript</span>
+                                                    <span class="tech-badge">HTML &amp; CSS</span>
+                                                    <span class="tech-badge">SQLite</span>
+                                                    <span class="tech-badge">MySQL</span>
+                                                    <span class="tech-badge">jQuery</span>
+                                                    <span class="tech-badge">Jinja</span>
+                                                    <span class="tech-badge">Amazon Web Services</span>
+                                                </div>
+                                                <br>
+                                                <div class="tf__team_skills_bar_single">
+                                                    <p>Performence</p>
+                                                    <div id="bar4" class="barfiller">
+                                                        <div class="tipWrap">
+                                                            <span class="tip"></span>
+                                                        </div>
+                                                        <span class="fill" data-percentage="70"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                    aria-labelledby="pills-profile-tab" tabindex="0">
+                                    <div class="row education">
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="tf__single_skill_2 fade_bottom" data-trigerid="skills"
+                                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                                <h3>Bachelor of Computer Applications</h3>
+                                                <h2>Maharshi Dayanand University, Rohtak, Haryana</h2>
+                                                <h4>2018 - 2021</h4>
+                                                <p>
+                                                    Earned a Bachelor's degree in Computer Applications with a focus on
+                                                    programming, web development, database management, and software
+                                                    engineering. Built a strong technical foundation that led to a
+                                                    successful career in Python Full Stack Development.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6">
+
+                                            <div class="tf__single_skill_2 fade_bottom" data-trigerid="skills"
+                                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                                <h3>Senior Secondary</h3>
+                                                <h2>Board of School Education Haryana, Bhiwani</h2>
+                                                <h4>2016 - 2017</h4>
+                                                <p>
+                                                    Completed Higher Secondary Education in the Science (Mathematics)
+                                                    stream with a strong focus on mathematics, logical reasoning, and
+                                                    analytical thinking, laying the foundation for higher studies in
+                                                    computer applications.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6">
+
+                                            <div class="tf__single_skill_2 fade_bottom" data-trigerid="skills"
+                                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                                <h3>Secondary</h3>
+                                                <h2>Govt Bangla College</h2>
+                                                <h4>2014 - 2015</h4>
+                                                <p>
+                                                    Completed Secondary Education with a strong academic foundation in
+                                                    mathematics, science, and core subjects, fostering discipline,
+                                                    curiosity, and problem-solving abilities.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--=======================================================================
+                //////////////////////////////// SKILLS END ///////////////////////////////
+                ========================================================================-->
+
+
+            <!--=======================================================================
+                /////////////////////////// milestone START ///////////////////////////
+                ========================================================================-->
+            <section id="award" class="tf_milestone">
+                <div class="container">
+                    <div class="mt-box">
+                        <div class="row" id="mt-trophy">
+                            <div class="col-xl-5 col-lg-5">
+                                <div class="tf_section_heading">
+                                    <h5 class="has-animation rise-up" style id="milestone-h5">● MILESTONES</h5>
+                                    <h2 class="has-animation letter-animate" style id="milestone-h2">ACHIEVEMENTS &
+                                        <span class="gr-word">RECOGNITION
+                                    </h2>
+                                    <div class="mt-para">
+                                        <p>A journey of continuous learning, growth, and impactful contributions. Here
+                                            are some of the milestones I'm proud of.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="award">
+                                    <img src="img/award.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gallery-box">
+                        <div class="container">
+                            <div class="mt-box">
+                                <div class="row" id="gallery">
+                                    <div class="col-xl-5 col-lg-5">
+                                        <div class="tf_milestone_text" style="height: 100%;">
+                                            <ul class="milestone-animation" style="height: 100%;">
+                                                <li class="milestone-animation-box" style="height: 100%;">
+                                                    <div class="top fade_bottom" data-trigerid="milestone" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; height: 100%;">
+                                                        <div style="display: flex; justify-content: center; align-items: center;">
+                                                            <div>
+                                                                <h3 style="font-size: 45px; margin-top: 0; margin-bottom: 40px;">
+                                                                    BEST INNOVATIVE 
+                                                                    <div class="wd" style="color: #45ff4f; display: inline-block;">
+                                                                        WEB DEVELOPER
+                                                                    </div>
+                                                                </h3>
+                                                                <p style="font-size: 20px;">
+                                                                    <span style="margin-right: 20px;">
+                                                                        <i style=" color:#45ff4f;" class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;
+                                                                        <strong style="font-size: 17px; color: #ffff;">2024</strong>
+                                                                    </span>
+                                                                    <span><i style=" color:#45ff4f;" class="fa-regular fa-building"></i>&nbsp;&nbsp;
+                                                                        <strong style="font-size: 17px; color: #ffff;">Livingstone Institute</strong>
+                                                                    </span>
+                                                                </p>
+                                                                <p>
+                                                                    Honored with the "Best Innovative Web Developer
+                                                                    Award" for innovation, excellence in web application
+                                                                    development, and outstanding contributions to the
+                                                                    successful launch of <span style="font-style: italic; color:#45ff4f;">"101 Startup Founder Tips"</span>.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-7 col-lg-7">
+                                        <div class="tf_milestone_img tf_milestone_img_bg_element">
+                                            <div class="img-inner-boder">
+                                                <img decoding="async" src="img/Achievement.png" class="milestone-img img-fluid w-100" alt>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="milestone-wrapper">
+                        <div class="milestone-wrapper-heading">
+                            WHAT THESE MILESTONES REPRESENT
+                        </div>
+                        <div class="milestone-features">
+                            <div class="mt-feature">
+                                <div class="mt-feature-icon"><i class="fa-solid fa-star"></i></div>
+                                <p>
+                                    Recognition of my hard work,
+                                    dedication, and commitment
+                                    to excellence.
+                                </p>
+                            </div>
+                            <div class="mt-feature">
+                                <div class="mt-feature-icon"><i class="fa-solid fa-book-open"></i></div>
+                                <p>
+                                    Showcasing my professional growth,
+                                    continuous learning mindset,
+                                    and impact.
+                                </p>
+                            </div>
+                            <div class="mt-feature">
+                                <div class="mt-feature-icon"><i class="fa-solid fa-award"></i></div>
+                                <p>
+                                    Honored for excellence, innovation,
+                                    and meaningful contributions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--=======================================================================
+                //////////////////////////// milestone END ////////////////////////////
+                ========================================================================-->
+
+
+            <!--=======================================================================
+                ///////////////////////////// PORTFOLIO START /////////////////////////////
+                ========================================================================-->
+            <section id="portfolio" class="tf__portfolio tf__portfolio_2 mt_120 xs_mt_80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-10 col-lg-9 mb_30">
+                            <div class="tf_section_heading">
+                                <h5 class="has-animation rise-up" style>my
+                                    recent
+                                    Portfolio</h5>
+                                <h2 class="has-animation letter-animate" style>Elevate your
+                                    brand to new heights with our portfolio
+                                    expertise</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row portfolio-animation">
+                        <div class="col-xl-6 col-sm-6 portfolio-animation-box">
+                            <a href="https://johnnette.com/" target="_blank" class="tf__portfolio_item play_btn"
+                                data-cursor="Watch <br> video">
+                                <img src="img/Johnnette.png" alt="Johnnette Technologies Pvt. Ltd" class="img-fluid w-100">
+                                <div class="text">
+                                    <h4>Organization visibility and Brand Image — Leading Drone Technology Company</h4>
+                                    <p>Johnnette Technologies</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-6 col-sm-6 portfolio-animation-box">
+                            <a class="tf__portfolio_item play_btn" href="https://www.lpcconsultancy.com/"
+                                target="_blank" data-cursor="Watch <br> video">
+                                <img src="img/LPC-Consultancy.png" alt="LPC-Consultancy" class="img-fluid w-100">
+                                <div class="text">
+                                    <h4>Startup Consultancy Platform.</h4>
+                                    <p>LPCConsultancy</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 portfolio-animation-box">
+                            <a href="https://johnnettestore.com/" target="_blank" class="tf__portfolio_item image_popup"
+                                data-cursor="View <br> Image">
+                                <img src="img/Johnnette-Store.png" alt="Johnnette Store" class="img-fluid w-100">
+                                <div class="text">
+                                    <h4>E-commerce platform for Drones and Accessories.</h4>
+                                    <p>Johnnette Store</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 portfolio-animation-box">
+                            <a href="https://www.futuretechnologiessummit.com/" target="_blank" alt="LPC-Consultancy"
+                                class="tf__portfolio_item play_btn" data-cursor="Audio <br> sound">
+                                <img src="img/FTS-future-technologies-summit.png" alt="FTS-future-technologies-summit"
+                                    class="img-fluid w-100">
+                                <div class="text">
+                                    <h4>Official platform for the Future Technologies Summit event.</h4>
+                                    <p>Future Technologies Summit</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 portfolio-animation-box">
+                            <a href="https://www.ft-magazine.com/" target="_blank" class="tf__portfolio_item details"
+                                data-cursor="Details <br> View">
+                                <img src="img/FT-Magazine.png" alt="FT-Magazine" class="img-fluid w-100">
+                                <div class="text">
+                                    <h4>Comprehensive Platform for Articles, Magazines & Promotions.</h4>
+                                    <p>FT-Magazine</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--=======================================================================
+                ////////////////////////////// PORTFOLIO END //////////////////////////////
+                ========================================================================-->
+
+
+            <!--=======================================================================
+                ////////////////////////////// CONTACT START //////////////////////////////
+                ========================================================================-->
+            <section id="contact" class="tf__contact_2 pt_95 xs_pt_45">
+                <div class="container mb-2">
+                    <div class="row">
+                        <div class="col-xl-8 m-auto mb_30">
+                            <div class="tf_section_heading">
+                                <h5 class="has-animation rise-up" style>CONTACT</h5>
+                                <h2 class="has-animation letter-animate" style>Get in touch with me</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row contact-animation">
+                        <div class="col-xl-4 col-md-6 col-lg-4 contact-animation-box">
+                            <div class="tf__contact_2_text fade_left" data-trigerid="contact"
+                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                <span>
+                                    <svg width="73" height="69" viewBox="0 0 73 69" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" id="null"
+                                        class="img-fluid w-100 svg replaced-svg">
+                                        <path d="M20.0547 52.587L20.0908 52.5469" stroke="#55E6A5" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M20.0556 9.21875H4.16667C2.97005 9.21875 2 10.1888 2 11.3854V64.8299C2 66.0266 2.97005 66.9965 4.16667 66.9965H35.9444C37.1412 66.9965 38.1111 66.0266 38.1111 64.8299V48.941"
+                                            stroke="#55E6A5" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M48.9453 2V38.1111" stroke="#55E6A5" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M38.1113 9.21875V30.8854" stroke="#55E6A5" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M70.6113 16.4453V23.6675" stroke="#55E6A5" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M27.2773 16.4453V23.6675" stroke="#55E6A5" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M59.7773 5.60938V34.4983" stroke="#55E6A5" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                                <h3>Phone</h3>
+                                <p>
+                                    Let’s connect and build something great — call or WhatsApp for work inquiries.
+                                </p>
+                                <a href="tel:+919671491680">+91 9671491680</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-lg-4 contact-animation-box">
+                            <div class="tf__contact_2_text fade_left" data-trigerid="contact"
+                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                <span>
+                                    <svg width="66" height="69" viewBox="0 0 66 69" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" id="null"
+                                        class="img-fluid w-100 svg replaced-svg">
+                                        <path
+                                            d="M22.1407 55.7085L4.65098 61.5385C3.34681 61.9732 2 61.0025 2 59.6275V10.1652C2 9.29831 2.55474 8.52863 3.37715 8.25452L22.1407 2M22.1407 55.7085L39.6305 61.5385C40.9346 61.9732 42.2814 61.0025 42.2814 59.6275V10.1652C42.2814 9.29831 41.7265 8.52863 40.9041 8.25452L22.1407 2M22.1407 55.7085V2"
+                                            stroke="#55E6A5" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path
+                                            d="M42.2812 8.71604L59.7711 2.88616C61.0752 2.45142 62.4219 3.42213 62.4219 4.79687V42.2838"
+                                            stroke="#55E6A5" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path
+                                            d="M49.4004 66.9996L56.5215 59.8789M56.5215 59.8789L63.6422 52.7578M56.5215 59.8789L49.4004 52.7578M56.5215 59.8789L63.6422 66.9996"
+                                            stroke="#55E6A5" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                                <h3>Location</h3>
+                                <p>Arihant Apartment, Noida sector 73, Uttar Pradesh - 201301, India</p>
+                                <a href="#contact">Let’s Connect — Location Independent</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-lg-4 contact-animation-box">
+                            <div class="tf__contact_2_text fade_left" data-trigerid="contact"
+                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                <span>
+                                    <svg width="69" height="69" viewBox="0 0 101 69" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" id="null"
+                                        class="img-fluid w-100 svg replaced-svg">
+                                        <path d="M39.1426 20.5703L60.0354 34.4989L80.9283 20.5703" stroke="#55E6A5"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M11.2871 41.4688H20.5728" stroke="#55E6A5" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M2 27.5312H20.5714" stroke="#55E6A5" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M20.5723 13.6071V11.2857C20.5723 6.15735 24.7296 2 29.858 2H90.2151C95.3436 2 99.5008 6.15735 99.5008 11.2857V57.7143C99.5008 62.8428 95.3436 67 90.2151 67H29.858C24.7296 67 20.5723 62.8428 20.5723 57.7143V55.3929"
+                                            stroke="#55E6A5" stroke-width="3" stroke-linecap="round"></path>
+                                    </svg>
+                                </span>
+                                <h3>Monday - Saturday</h3>
+                                <p>Exploring career opportunities in startups and MNCs — remote or onsite.</p>
+                                <a href="mailto:fullstack.yogesh@gmail.com">fullstack.yogesh@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact_form_2">
+                        <form style="position: relative;" id="my-form" action="https://formspree.io/f/mdkgrzad"
+                            method="POST">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" name="name" placeholder="Your Name Here">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="text" name="subject" placeholder="Subject">
+                                </div>
+                                <div class="col-lg-12">
+                                    <input type="email" name="email" placeholder="Email">
+                                </div>
+                                <div class="col-12">
+                                    <textarea rows="5" name="message" placeholder="Your Message Here"></textarea>
+                                </div>
+                            </div>
+                            <button id="my-form-button" type="submit">Submit</button>
+                            <p style="color: green; font-size: 18px; margin-top: 25px; text-align: left; padding: 0 0 0 10px;"
+                                id="my-form-status"></p>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+            <!--=======================================================================
+                /////////////////////////////// CONTACT END ///////////////////////////////
+                ========================================================================-->
+
+
+            <!--=======================================================================
+                /////////////////////////////// FOOTER START //////////////////////////////
+                ========================================================================-->
+            <div class="footer_2_copyright_area mt_120 xs_mt_80">
+                <div class="col-12">
+                    <div class="tf__footer_copyright">
+                        <p style="width: 100%;">
+                            © Yogesh Kumar 2026 | All Rights
+                            Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--=======================================================================
+                //////////////////////////////// FOOTER END ///////////////////////////////
+                ========================================================================-->
+
+
+            <!--=======================================================================
+                ////////////////////////// PROGRESS-BUTTON START //////////////////////////
+                ========================================================================-->
+            <div class="circle-container">
+                <svg class="circle-progress svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+                </svg>
+            </div>
+            <!--=======================================================================
+                /////////////////////////// PROGRESS-BUTTON END ///////////////////////////
+                ========================================================================-->
+
+
+            <!--=======================================================================
+                /////////////////////////// MAGIC-CURSOR START ////////////////////////////
+                ========================================================================-->
+            <div id="cursor" class="cursor">
+                <div class="ring">
+                    <div><!--Border--></div>
+                </div>
+                <div class="ring">
+                    <div><!--Pointer--></div>
+                </div>
+            </div>
+            <!--=======================================================================
+                //////////////////////////// MAGIC-CURSOR END /////////////////////////////
+                ========================================================================-->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="script.js"></script>
+</body>
+</html>
