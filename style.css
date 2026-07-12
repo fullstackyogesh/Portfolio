@@ -1313,6 +1313,55 @@ section#service {
 }
 
 .tf_single_service .text {
+    position: relative;
+}
+
+.tf_single_service .text::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 53, 18, 0.12),
+            rgba(61, 255, 126, 0));
+    opacity: 0;
+    transition: .4s;
+}
+
+.tf_single_service .text:hover {
+    transform: translateY(-12px);
+    border-color: #32d74b38;
+    box-shadow: inset 0px 0px 20px rgba(50, 215, 75, 0.26)
+}
+
+.tf_single_service .text:hover::before {
+    opacity: 1;
+}
+
+.tf_single_service .text h3 {
+    transition: .35s;
+}
+
+.tf_single_service .text:hover h3 {
+    color: #32d74b;
+}
+
+.tf_single_service .text::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #32d74b;
+    transition: .4s;
+}
+
+.tf_single_service .text:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.tf_single_service .text {
     margin-top: 165px;
     background: #09101a;
     padding: 40px;
@@ -2289,6 +2338,7 @@ select {
 
 .tf__footer_copyright p {
     opacity: 0.5;
+    font-size: 14px;
 }
 
 /* <!-- ======= FOOTER -END- ======= --> */

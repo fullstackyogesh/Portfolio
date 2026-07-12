@@ -3,7 +3,6 @@ section#award {
     padding-bottom: 150px;
     background-color: #000914;
     background-color: black;
-    padding: 0 20px 0 20px;
 }
 
 .mt-box {
@@ -11,16 +10,78 @@ section#award {
     margin-right: 70px;
 }
 
+#mt-trophy .col-xl-5{
+    border-bottom: .5px solid #00800061!important;
+}
+
+.mt-trophy-animation{
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mt-trophy-animation::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 27px;
+    left: 0px;
+    background: radial-gradient(circle, #173a18a6 1.5px, transparent 1.5px);
+    background-size: 18px 18px;
+}
+
+.mt-trophy-animation::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 27px;
+    left: 0px;
+    background: radial-gradient(circle, rgb(70, 244, 70) 1.5px, transparent 1.5px);
+    background-size: 18px 18px;
+    mask-image: linear-gradient(
+        45deg,
+        transparent 0%,
+        transparent 35%,
+        rgba(255,255,255,.2) 42%,
+        rgba(255,255,255,.7) 48%,
+        #fff 50%,
+        rgba(255,255,255,.7) 52%,
+        rgba(255,255,255,.2) 58%,
+        transparent 65%,
+        transparent 100%
+    );
+    -webkit-mask-size: 250% 100%;
+    mask-size: 250% 100%;
+    animation: dotWave 10s linear infinite;
+}
+
+@keyframes dotWave{
+    from{
+        -webkit-mask-position: -150% 0;
+                mask-position: -150% 0;
+    }
+    to{
+        -webkit-mask-position: 150% 0;
+                mask-position: 150% 0;
+    }
+}
+
+
+
+
+
 #milestone-h5 {
-    color: #45ff4f !important;
+    color: green !important;
     font-weight: 500 !important;
     font-size: 20px;
-    font-size: 18px;
-    letter-spacing: 2.4px !important;
+    font-size: 17px;
+    letter-spacing: 2px !important;
     text-transform: uppercase;
     margin-bottom: 30px;
     display: inline-block;
     position: relative;
+    word-spacing: 5px;
 }
 
 .milestone-h2 {
@@ -28,7 +89,7 @@ section#award {
 }
 
 .gr-word .letter{
-    color: #45ff4f;
+    color: green;
 }
 
 #milestone-h2::after {
@@ -36,7 +97,7 @@ section#award {
     display: block;
     width: 50px;
     height: 1.5px;
-    background: #45ff4f;
+    background: green;
     margin-top: 30px;
 }
 
@@ -45,10 +106,73 @@ section#award {
 }
 
 .mt-para p {
-    font-size: 17px;
+    font-size: 16px;
+}
+
+.award{
+    position: relative;
+    margin: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.award img{
+    position: relative;
+    width: 550px!important;
+    z-index: 5;
+}
+.award-glow{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #5EFF3B;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: .18;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.award-ring{
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(95,255,59,.25);
+    border-radius: 50%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: rotateRing 18s linear infinite;
+}
+.award-ring::after{
+    content:"";
+    position:absolute;
+    width:10px;
+    height:10px;
+    background:#63ff3f;
+    border-radius:50%;
+    box-shadow:
+    0 0 12px #63ff3f,
+    0 0 30px #63ff3f;
+    left:50%;
+    top:-5px;
+    transform:translateX(-50%);
+}
+@keyframes rotateRing{
+    from{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    to{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
 }
 
 #gallery {
+    margin-top: 150px;
     backdrop-filter: blur(20px); 
     background: #080b12;
     border: 1px solid rgba(255,255,255,.05);
@@ -230,6 +354,399 @@ section#award {
     line-height: 1.8;
     color: #a2a2a2;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   Laptop (992px - 1199px)
+=========================== */
+/* @media (max-width:1199px){
+
+.mt-box{
+    margin:0 30px;
+}
+
+.award img{
+    width:430px !important;
+}
+
+.award-ring{
+    width:360px;
+    height:360px;
+}
+
+.award-glow{
+    width:200px;
+    height:200px;
+}
+
+.milestone-wrapper{
+    padding:0 4%;
+}
+
+.milestone-features{
+    gap:30px;
+}
+
+.tf_milestone_text ul li .top h3{
+    font-size:26px;
+}
+
+} */
+
+/* ===========================
+   Tablet (768px - 991px)
+=========================== */
+/* @media (max-width:991px){
+
+section#award{
+    padding:100px 0;
+}
+
+.mt-box{
+    margin:0 20px;
+}
+
+#mt-trophy .row{
+    flex-direction:column;
+}
+
+#mt-trophy .col-xl-7,
+#mt-trophy .col-xl-5{
+    width:100%;
+}
+
+#mt-trophy .col-xl-5{
+    border:none !important;
+    margin-top:60px;
+}
+
+#milestone-h2{
+    font-size:56px;
+    line-height:1.15;
+}
+
+.mt-para{
+    margin-top:35px;
+}
+
+.award{
+    float:none;
+}
+
+.award img{
+    width:380px !important;
+}
+
+.award-ring{
+    width:330px;
+    height:330px;
+}
+
+.award-glow{
+    width:180px;
+    height:180px;
+}
+
+#gallery{
+    margin-top:100px;
+}
+
+#gallery-box .tf_milestone_text{
+    padding:25px;
+}
+
+#gallery-box .tf_milestone_img{
+    margin:0;
+}
+
+.milestone-wrapper{
+    margin-top:100px;
+}
+
+.milestone-features{
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+.mt-feature:nth-child(2){
+    border-right:none;
+}
+
+} */
+/* ===========================
+   Mobile (576px - 767px)
+=========================== */
+/* @media (max-width:767px){
+
+section#award{
+    padding:80px 0;
+}
+
+.mt-box{
+    margin:0 15px;
+}
+
+.mt-trophy-animation{
+    width:150px;
+    height:110px;
+}
+
+#milestone-h5{
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+#milestone-h2{
+    font-size:40px;
+    line-height:1.2;
+}
+
+#milestone-h2::after{
+    margin-top:20px;
+}
+
+.mt-para{
+    margin-top:25px;
+}
+
+.mt-para p{
+    font-size:15px;
+    line-height:28px;
+}
+
+.award{
+    margin-top:50px;
+}
+
+.award img{
+    width:280px !important;
+}
+
+.award-ring{
+    width:250px;
+    height:250px;
+}
+
+.award-glow{
+    width:150px;
+    height:150px;
+}
+
+#gallery{
+    margin-top:70px;
+}
+
+.tf_milestone_text ul li .top h3{
+    font-size:24px;
+}
+
+.tf_milestone_text ul li p{
+    font-size:15px;
+}
+
+#gallery-box .tf_milestone_text{
+    padding:20px;
+}
+
+#gallery-box .tf_milestone_img{
+    margin:0;
+}
+
+.milestone-wrapper{
+    padding:0 20px;
+    margin-top:80px;
+}
+
+.milestone-wrapper-heading::before,
+.milestone-wrapper-heading::after{
+    display:none;
+}
+
+.milestone-features{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.mt-feature{
+    border:none !important;
+    padding:10px 0;
+}
+
+.mt-feature-icon{
+    width:75px;
+    height:75px;
+}
+
+} */
+/* ===========================
+   Small Mobile (<576px)
+=========================== */
+@media (max-width:575px){
+.main #banner{
+    background-position: 40% !important;
+}
+    .tf_banner_text h1, .tf_banner_text span {
+    font-size: 41px !important;
+}
+.tf_banner_text ul{
+    margin-left: 0;
+    gap: 25px;
+    margin-bottom: 0;
+}
+.tf_banner_text ul li a {
+    padding: 15px 15px;
+    font-size: 14px;
+    margin-right: 0;
+}
+
+.milestone-features{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+.milestone-wrapper-heading::before,
+.milestone-wrapper-heading::after{
+    display:none;
+}
+.tf_section_heading h2 span {
+    font-size: 27px;
+    line-height: 31px;
+}
+.col-xl-6.col-lg-6{
+    padding-right: 12px!important;
+}
+.tf_about_text ul li .top h3 {
+    font-size: 21px;
+}
+.tf_single_service .text {
+    padding: 40px 20px;
+}
+.tf_single_service .text {
+    border-color: #32d74b38;
+    box-shadow: inset 0px 0px 20px rgba(50, 215, 75, 0.26)
+}
+.tf_single_service .text h3 {
+    color: #32d74b;
+}
+.tf_single_service .text::after {
+    width: 100%;
+    left: 0;
+}
+.tf_section_heading h5 {
+    font-size: 18px;
+}
+.tf__skills_2 .nav {
+    justify-content: space-between;
+}
+.tf__skills_2 .nav .nav-item button {
+    padding: 12px 15px;
+    margin: 5px 5px;
+}
+.tf__single_skill_2 {
+    padding-left: 40px;
+}
+
+/* .mt-box{
+    margin:0 10px;
+}
+
+#milestone-h2{
+    font-size:34px;
+}
+
+.award img{
+    width:230px !important;
+}
+
+.award-ring{
+    width:210px;
+    height:210px;
+}
+
+.award-glow{
+    width:120px;
+    height:120px;
+}
+
+.mt-feature p{
+    font-size:15px;
+} */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ================= MOBILE ================= */
 
