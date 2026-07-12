@@ -400,9 +400,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // <!-- ======= SKILLS-BUTTON START ======= -->
 let tabButtons = [
     document.querySelector("#pills-home-tab"),
+    document.querySelector("#pills-disabled-tab"),
     document.querySelector("#pills-profile-tab"),
     //document.querySelector("#pills-contact-tab"),
-    document.querySelector("#pills-disabled-tab")
 ];
 
 let tabContents = [
@@ -422,8 +422,8 @@ function activateTab(activeTab, allTabs, activeBtn, allBtns) {
 
 // Event listeners for buttons
 tabButtons[0].onclick = () => activateTab(tabContents[0], tabContents, tabButtons[0], tabButtons);
-tabButtons[1].onclick = () => activateTab(tabContents[1], tabContents, tabButtons[1], tabButtons);
-tabButtons[2].onclick = () => activateTab(tabContents[0], tabContents, tabButtons[2], tabButtons);
+tabButtons[1].onclick = () => activateTab(tabContents[0], tabContents, tabButtons[1], tabButtons);
+tabButtons[2].onclick = () => activateTab(tabContents[1], tabContents, tabButtons[2], tabButtons);
 //tabButtons[2].onclick = () => activateTab(tabContents[2], tabContents, tabButtons[2], tabButtons);
 // <!-- ======= SKILLS-BUTTON -END- ======= -->
 // <!-- ======= SKILLS-BUTTON -END- ======= -->
@@ -529,7 +529,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const observerOptions = {
-        threshold: 0.3
+        threshold: window.innerWidth <= 767 ? 0.1 : 0.3
     };
 
     animationGroups.forEach(group => {
@@ -554,6 +554,7 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(container);
     });
 });
+
 // <!-- ======= HSECTION-CONTAINER-ANIMATION START ======= -->
 // <!-- ======= HSECTION-CONTAINER-ANIMATION START ======= -->
 // <!-- ======= HSECTION-CONTAINER-ANIMATION START ======= -->
@@ -676,19 +677,19 @@ document.addEventListener('DOMContentLoaded', function () {
         link.href = "https://wa.me/" + phone;
     } else {
         // Desktop: on click, try whatsapp://, fallback to web.whatsapp.com
-        link.href = "#";+
+        link.href = "#"; +
 
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
 
-            // Try to open WhatsApp Desktop app
-            window.location.href = "whatsapp://send?phone=" + phone;
+                // Try to open WhatsApp Desktop app
+                window.location.href = "whatsapp://send?phone=" + phone;
 
-            // After 1.5 seconds, fallback to WhatsApp Web
-            setTimeout(function () {
-                window.open("https://web.whatsapp.com/send?phone=" + phone, "_blank");
-            }, 1500);
-        });
+                // After 1.5 seconds, fallback to WhatsApp Web
+                setTimeout(function () {
+                    window.open("https://web.whatsapp.com/send?phone=" + phone, "_blank");
+                }, 1500);
+            });
     }
 });
 // <!-- ======= WHATSAPP-CONTACT -END- ======= -->

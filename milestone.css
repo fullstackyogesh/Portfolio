@@ -665,11 +665,18 @@ section#award{
     justify-content: space-between;
 }
 .tf__skills_2 .nav .nav-item button {
-    padding: 12px 15px;
+    padding: 12px 12px;
     margin: 5px 5px;
 }
 .tf__single_skill_2 {
     padding-left: 40px;
+}
+.tech-stack {
+    gap: 10px;
+}
+.tf__single_skill_2 {
+    border-color: #32d74b38;
+    box-shadow: inset 0px 0px 20px rgba(50, 215, 75, 0.26);
 }
 
 /* .mt-box{
