@@ -678,7 +678,13 @@ section#award{
     border-color: #32d74b38;
     box-shadow: inset 0px 0px 20px rgba(50, 215, 75, 0.26);
 }
-
+.tf__single_skill_2 h3 {
+    color: #32d74b;
+}
+.tf__single_skill_2::after {
+    width: 100%;
+    left: 0;
+}
 /* .mt-box{
     margin:0 10px;
 }
