@@ -364,24 +364,128 @@ section#award {
     color: #a2a2a2;
 }
 
+@media (max-width:1281px){
+    .main #banner {
+        background-position: 40% !important;
+    }
+    .tf_banner_text h1,
+    .tf_banner_text span {
+        font-size: 50px !important;
+    }
+    .tf_section_heading h2 span {
+        font-size: 40px;
+        line-height: 31px;
+    }
+    .tf_banner_text ul {
+        margin-left: 0;
+        gap: 25px;
+        margin-bottom: 0;
+    }
+    .tf_section_heading h2 span {
+        line-height: 45px;
+    }
+    
+    .tf_about_text ul li .top h3 {
+        font-size: 22px;
+    }
+    .tf_single_service .text {
+        padding: 40px 20px;
+    }
+    .tf_single_service .text {
+        border-color: #32d74b38;
+        box-shadow: inset 0px 0px 20px rgba(50, 215, 75, 0.26)
+    }
+    .tf_single_service .text h3 {
+        color: #32d74b;
+    }
+    .tf_single_service .text::after {
+        width: 100%;
+        left: 0;
+    }
+    .tf__single_skill_2 {
+        border-color: #32d74b38;
+        box-shadow: inset 0px 0px 20px rgba(50, 215, 75, 0.26);
+    }
 
-
+    .tf__single_skill_2 h3 {
+        color: #32d74b;
+    }
+    section#award {
+        padding-left: 0;
+    }
+    .mt-box {
+        margin: 0 20px 0 20px;
+    }
+    .award-glow {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+    }
+    .award-ring {
+        width: 80%;
+        height: 90%;
+    }
+    #gallery .top h3 {
+        font-size: 40px !important;
+    }
+    .milestone-wrapper-heading {
+        font-weight: 500;
+        color: green;
+    }
+    .mt-feature:not(:last-child) {
+        border-right: none;
+    }
+    .mt-feature {
+        box-shadow: inset 0px 0px 20px rgba(50, 100, 215, 0.26);
+        border-radius: 10px;
+    }
+    
+    #portfolio {
+        margin-top: 0 !important;
+        padding-top: 120px !important;
+        padding-bottom: 120px !important;
+        background: #080b12;
+    }
+}
 
 /* ===========================
    Laptop (992px - 1199px)
 =========================== */
-/* @media (max-width:1199px){
-} */
+@media (max-width:1199px){
+    #gallery .top h3 {
+        font-size: 35px !important;
+    }
+}
 
 /* ===========================
    Tablet (768px - 991px)
 =========================== */
-/* @media (max-width:991px){
-} */
+@media (max-width:991px){
+    .main #banner {
+        background-position: 0% !important;
+    }
+    .tf_banner_text h1,
+    .tf_banner_text span {
+        font-size: 42px !important;
+    }
+    .award{
+        margin-top: 150px;
+    }
+    #gallery .top h3 {
+        margin-top: 20px!important;
+    }
+    .milestone-wrapper-heading::before,
+    .milestone-wrapper-heading::after {
+        display: none;
+    }
+    .milestone-wrapper {
+        padding: 0px 0%;
+    }
+}
 /* ===========================
    Mobile (576px - 767px)
 =========================== */
-/* @media (max-width:767px){} */
+@media (max-width:767px){}
 
 /* ===========================
    Small Mobile (<576px)
@@ -511,7 +615,7 @@ section#award {
     }
 
     #gallery .top h3 {
-        font-size: 35px !important;
+        font-size: 30px !important;
     }
 
     .milestone-features {
