@@ -249,13 +249,18 @@ section#award {
     font-weight: 600;
     margin-top: 20px;
 }
+.wd{
+    font-weight: bolder!important; 
+    color: green; 
+    display: inline-block;
+}
 
 .wd::after {
     content: "";
     display: block;
     width: 50px;
     height: 1.5px;
-    background: #45ff4f;
+    background: green;
     margin-top: 30px;
 }
 
