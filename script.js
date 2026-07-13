@@ -287,9 +287,41 @@ menuIcon.onclick = () => {
     menu.classList.toggle('show_menu')
     menuIcon.classList.toggle('show_icon')
     menuBtn.classList.toggle('fa-xmark')
+};
+
+// Close Menu Function
+function closeMenu() {
+    if (window.innerWidth <= 1199.99) {
+        menu.classList.remove('show_menu');
+        menuIcon.classList.remove('show_icon');
+        menuBtn.classList.remove('fa-xmark');
+    }
 }
 
 
+// Close menu when clicking any nav link
+document.querySelectorAll('#menu-bar ul li a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function (e) {
+    if (
+        window.innerWidth <= 1199.99 &&
+        menu.classList.contains('show_menu') &&
+        !menu.contains(e.target) &&
+        !menuIcon.contains(e.target)
+    ) {
+        closeMenu();
+    }
+});
+
+// Close menu on scroll
+window.addEventListener('scroll', closeMenu);
+
+
+
+// ================= SERVICES =================
 const services = document.querySelectorAll('.tf_single_service');
 
 services.forEach(service => {
@@ -310,6 +342,7 @@ services.forEach(service => {
 // <!-- ======= HEADER-NAV-BUTTON START ======= -->
 // <!-- ======= HEADER-NAV-BUTTON START ======= -->
 // <!-- ======= HEADER-NAV-BUTTON START ======= -->
+
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav li a");
     const sections = document.querySelectorAll("section");
