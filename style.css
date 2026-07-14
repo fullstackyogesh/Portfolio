@@ -413,7 +413,6 @@ svg {
 
 .main_menu ul::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari, Opera */
 }
 
 ul,

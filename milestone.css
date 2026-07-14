@@ -364,6 +364,96 @@ section#award {
     color: #a2a2a2;
 }
 
+
+/* =============== internal header style =============== */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-badge {
+    padding: 5px 15px;
+    border-radius: 50px;
+    background: rgba(37, 45, 68, .9);
+    backdrop-filter: blur(15px);
+    color: #8EE7DA;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    border: 1px solid rgba(255, 255, 255, .06);
+    transition: .35s;
+    user-select: none;
+}
+
+.tech-badge:hover {
+    color: #fff;
+    background: linear-gradient(135deg,
+            #2F7D1F,
+            #4CAF50);
+    transform: translateY(-5px);
+    box-shadow:
+        0 15px 35px rgba(76, 175, 80, .25);
+}
+
+
+.tf__single_skill_2 {
+    transition: .35s;
+    position: relative;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.tf__single_skill_2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 53, 18, 0.12),
+            rgba(61, 255, 126, 0));
+    opacity: 0;
+    transition: .4s;
+}
+
+.tf__single_skill_2:hover {
+    transform: translateY(-12px);
+    border-color: #32d74b38;
+    box-shadow: inset 0px 0px 20px rgba(50, 215, 75, 0.26)
+}
+
+.tf__single_skill_2:hover::before {
+    opacity: 1;
+}
+
+.tf__single_skill_2 h3 {
+    transition: .35s;
+}
+
+.tf__single_skill_2:hover h3 {
+    color: #32d74b;
+}
+
+.tf__single_skill_2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #32d74b;
+    transition: .4s;
+}
+
+.tf__single_skill_2:hover::after {
+    width: 100%;
+    left: 0;
+}
+/* ==============x internal header style x============== */
+
+
+
+
+
 @media (max-width:1281px){
     .main #banner {
         background-position: 40% !important;
